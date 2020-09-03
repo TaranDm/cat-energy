@@ -1,0 +1,99 @@
+.header {
+
+  width: 100%;
+
+}
+.header__container {
+  display: flex;
+padding-top: 55px;
+}
+._container {
+
+}
+.icon-menu {
+position: relative;
+}
+.header__logo {
+  position: relative;
+  z-index: 2;
+  flex: 1 1 auto;
+
+}
+.header__menu {
+  display: flex;
+  position: absolute;
+  padding-top: 246px;
+
+
+}
+.menu {
+
+}
+.menu__about-Us {
+  flex: 0 0 422px;
+}
+.menu__title {
+  font-family: Oswald;
+  font-size: 60px;
+  line-height: 60px;
+  color: #111111;
+}
+.menu__text {
+margin: 30px 0 50px 0;
+}
+.text-title {
+  font-family: Oswald;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+}
+.menu__button {
+}
+.button {
+  display: inline-block;
+  font-family: Oswald;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68b738;
+}
+.button-big {
+ padding:15px 28px;
+}
+.menu__body {
+
+
+}
+.menu__list {
+display: flex;
+
+}
+.menu__link {
+  font-family: Oswald;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: inline-block;
+  color: #ffffff;
+  margin-right: 40px;
+
+}
+
+.menu__image {
+  position: absolute;
+  z-index: -1;
+  top: 169px;
+  left: 451px;
+  width: 552px;
+  height: auto;
+}
+
+._currently {
+  display: inline-block;
+
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+}

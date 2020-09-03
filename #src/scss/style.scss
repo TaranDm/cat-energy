@@ -1,0 +1,145 @@
+@import "mixins.scss";
+/*подключение основного шрифта*/
+@import "fonts";
+
+
+/*шрифт по умолчанию */
+$fontfamily: ArialMT sans-serif;
+
+
+/*переменные*/
+$minwidth: 320px;
+$mw: 1300; /*прописываем вымеряную ширину контейнера (без отступов)*/
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+@import "null";
+
+body {
+
+  justify-content: flex-start ;
+  font-family: $fontfamily;
+  font-size: 16px;
+  line-height: 24px;
+  color: #444444;
+  background-color: #fff;
+  font-weight: 400;
+  &_lock {
+    overflow: hidden;
+    @media (max-width: $md3+px) {
+    }
+  }
+}
+.index-page {
+&:before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 697px;
+  background-color: #65a93c;
+  background-image:url("../img/green-background.png");
+  background-repeat: no-repeat;
+  background-size: auto 697px;
+  background-position-x: right;
+}
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.ibg{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ibg img{
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+@import "header";
+._container {
+  max-width: 1220px;
+
+  margin: 0 auto;
+  @media (max-width: 975px) {
+    max-width: 970px;
+  }
+  @media (max-width: 768px) {
+    max-width: 708px;
+  }
+  @media (max-width: 640px){
+
+  }
+
+  @media (max-width: 570px){
+
+  }
+
+  @media (max-width: 320px) {
+    max-width: none;
+    padding: 0 15px;
+  }
+
+}
+
+/*________________________бургер меню_____________________*/
+.icon-menu {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 5;
+
+ span {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    top: calc(50% - 1px);
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #bb9c66;
+
+    &:last-child {
+      top: auto;
+      bottom: 0px;
+    }
+  }
+}
+
+.icon-menu._active span {
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+
+.icon-menu._active span:first-child {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: calc(50% - 1px);
+}
+
+.icon-menu._active span:last-child {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  bottom: calc(50% - 1px);
+}
