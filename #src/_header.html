@@ -6,13 +6,33 @@
             <span></span>
             <span></span>
         </div>
-        <a href="" class="header__logo"><img src="img/logo_desktop.png" width="202" alt=""></a>
+        <div class="header__box-logo">
+            <a href="" class="header__logo">
+                <picture>
+                    <source type="image/webp" media="(max-width: 768px)" srcset="img/logo-mobile.png">
+                    <source type="image/webp" srcset="img/logo_desktop.png">
+                    <img src="img/logo_desktop.png" alt="">
+                </picture>
+            </a>
+            <div class="header__mobile-icon">
+                <img src="img/logo-mobile-header.png" alt="">
+            </div>
+        </div>
+
+
         <div class="header__menu menu">
             <div class="menu__about-Us">
                 <h1 class="menu__title" >Функциональное питание для котов</h1>
                 <p class="menu__text text-title">Занялся собой? Займись котом!</p>
                 <div class="menu__image">
-                    <img src="img/title-img.png" alt="">
+                    <picture>
+                        <source type="image/webp" media="(min-width: 1300px)" srcset="img/title-img-desctop.png">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="img/title-img-teblet.png">
+                        <source type="image/webp" srcset="img/title-img-mobile.png">
+                        <img src="img/title-img-desctop.png" alt="">
+                    </picture>
+
+
                 </div>
                 <a href="#" class="menu__button button button-big">подобрать программу</a>
 

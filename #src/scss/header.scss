@@ -5,7 +5,7 @@
 }
 .header__container {
   display: flex;
-padding-top: 55px;
+padding-top: 40px;
 }
 ._container {
 
@@ -13,20 +13,136 @@ padding-top: 55px;
 .icon-menu {
 position: relative;
 }
+
+/*________________________бургер меню_____________________*/
+
+.icon-menu {
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 5;
+  right: 40px;
+  @media (max-width: 768px) {
+    display: block;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+
+    span {
+      transition: all 0.3s ease 0s;
+      top: calc(50% - 1px);
+      left: 0px;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: #000;
+
+
+      &:first-child {
+        top: 0px;
+        bottom: auto;
+      }
+      &:last-child {
+        top: auto;
+        bottom: 0px;
+      }
+    }
+    &._active{
+      span {
+
+        transform: scale(0);
+        &:first-child {
+          transform: rotate(-45deg);
+          top: calc(50% - 1px);
+        }
+        &:last-child {
+          transform: rotate(45deg);
+          bottom: calc(50% - 1px);
+        }
+      }
+    }
+  }
+
+}
+.header__box-logo {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+
 .header__logo {
   position: relative;
   z-index: 2;
-  flex: 1 1 auto;
 
+  @media screen and (max-width : 1280px) {
+    flex: 1 1 95px;
+  }
+  @media screen and (max-width : 975px) {
+    flex: 1 1 50px;
+  }
+  @media screen and (max-width : 768px) {
+    flex: 0 0 auto;
+  }
+}
+.header__mobile-icon {
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, 0);
+  display: none;
+  @media screen and (max-width : 768px) {
+    display: block;
+  }
 }
 .header__menu {
   display: flex;
   position: absolute;
   padding-top: 246px;
-
-
+  @media screen and (max-width : 1280px) {
+    padding-top: 120px;
+  }
 }
 .menu {
+
+  &__body{
+    @media (max-width:768px) {
+      background-color: #ffffff;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: -400px;
+      overflow: auto;
+      padding: 100px 0 20px 0px;
+      /*делаем текст меню навигации не видимым при появлении бургер меню (разрешение 768px)*/
+      opacity: 0;
+      visibility: hidden;
+
+      /* плашка которая закрывает меню при расширении менее 768px */
+      &:after {
+        content: "";
+        background-color: #fff;
+        position: fixed;
+        width: 100%;
+        height: 75px;
+        left: 0;
+        top: 0;
+      }
+      &._active{
+        opacity: 1;
+        visibility: visible;
+        top: 0px;
+        transition: all 0.3s ease 0s;
+        z-index: 1;
+      }
+
+
+    }
+
+  }
 
 }
 .menu__about-Us {
@@ -40,6 +156,9 @@ position: relative;
 }
 .menu__text {
 margin: 30px 0 50px 0;
+  @media screen and (max-width : 1280px) {
+    margin: 30px 0 35px 0;
+  }
 }
 .text-title {
   font-family: Oswald;
@@ -63,7 +182,7 @@ margin: 30px 0 50px 0;
  padding:15px 28px;
 }
 .menu__body {
-
+align-self: center;
 
 }
 .menu__list {
@@ -78,22 +197,40 @@ display: flex;
   text-transform: uppercase;
   display: inline-block;
   color: #ffffff;
-  margin-right: 40px;
-
+  margin-right: 20px;
+  @media screen and (max-width : 1280px) {
+    color: #000;
+  }
 }
+
+
 
 .menu__image {
   position: absolute;
   z-index: -1;
   top: 169px;
   left: 451px;
-  width: 552px;
+  max-width: 552px;
   height: auto;
+  @media screen and (max-width : 1280px) {
+    top: 306px;
+    left: -90px;
+  }
 }
 
 ._currently {
-  display: inline-block;
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -10px;
+    height: 2px;
+    background-color: #fff;
+    @media screen and (max-width : 1280px) {
+      background-color: #68b738;
+  }
 
-  border-bottom: 2px solid white;
-  padding-bottom: 10px;
+  }
 }
