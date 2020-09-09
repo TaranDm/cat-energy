@@ -53,7 +53,7 @@ body {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  overflow: hidden;
+  //overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -81,7 +81,7 @@ body {
     max-width: 970px;
   }
   @media (max-width: 975px) {
-    max-width: 708px;
+    max-width: 768px;
   }
   @media (max-width: 768px) {
     max-width: 640px;
@@ -96,10 +96,12 @@ body {
 
   @media (max-width: 320px) {
     max-width: none;
-    padding: 0 15px;
+    padding: 0 20px;
   }
-
 }
+
+@import "main-banner";
+@import "block-catalog";
 
 
 

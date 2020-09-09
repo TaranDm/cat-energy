@@ -1,0 +1,124 @@
+.main-banner {
+  @media (max-width: 768px){
+    position: relative;
+  &:before{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 305px;
+    background-image: url(../img/green-background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+    }
+  &__wrapper {
+    display: flex;
+    padding-top: 110px;
+    @media screen and (max-width : 1280px) {
+      padding-top: 60px;
+    }
+    @media (max-width: 768px){
+      padding-top: 26px;
+    }
+
+}
+}
+.banner {
+  &__about-Us {
+    flex: 0 0 422px;
+    margin-left: 84px;
+
+    @media (max-width: 768px){
+      flex: 0 0 283px;
+      margin: 0 auto;
+    }
+    @media (max-width: 320px){
+      margin-top: 20px;
+    }
+  }
+
+  &__title {
+    font-family: Oswald;
+    font-size: 60px;
+    line-height: 60px;
+    color: #111111;
+    font-weight: 400;
+    @media (max-width: 768px){
+      font-size: 36px;
+      line-height: 36px;
+      color: #fff;
+      text-align: center;
+    }
+    @media (max-width: 320px){
+      font-size: 28px;
+      line-height: 28px;
+      color: #ffffff;
+    }
+  }
+  &__text {
+    font-family: Oswald;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    margin: 30px 0 50px 0;
+    @media screen and (max-width : 1280px) {
+      margin: 30px 0 35px 0;
+    }
+    @media (max-width: 768px){
+      margin: 21px 0 21px 0;
+    }
+    @media (max-width: 320px){
+      font-size: 14px;
+      line-height: 14px;
+      margin: 15px 0 15px 0;
+      text-align: center;
+    }
+  }
+  &__image {
+    position: absolute;
+    z-index: -1;
+    top: 130px;
+
+    margin-left: 119px;
+    max-width: 552px;
+    height: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    @media (max-width : 1280px) {
+      top: 343px;
+      margin-left: -216px;
+    }
+    @media screen and (max-width : 768px) {
+      transform: translate(-50%, 0);
+      margin-left: -12px;
+      top: 170px;
+    }
+  }
+}
+.text-title {
+  font-family: Oswald;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #111111;
+  @media screen and (max-width : 768px) {
+    color: #ffffff;
+  }
+}
+.banner {
+  &__button {
+
+    @media (max-width : 768px) {
+      margin-top: 270px;
+      margin-left: 10px;
+    }
+
+  }
+}
