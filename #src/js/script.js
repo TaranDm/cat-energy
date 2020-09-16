@@ -1,5 +1,7 @@
+document.addEventListener('DOMContentLoaded', function() {
 
-$(document).ready(function () {
+    console.log('document is ready. I can sleep now');
+
     let burger_link = document.querySelector(".icon-menu");
     let nav_text = document.querySelector(".menu__body");
     let scroll = document.querySelector ("body");
@@ -23,13 +25,18 @@ $(document).ready(function () {
             nav_text.classList.remove("_active");
             scroll.style.overflow = "visible"
         }
-
     });
+    var rangeSlider = document.getElementById('slider');
 
-    $( function() {
-        $( "#slider" ).slider();
-    } );
+    noUiSlider.create(rangeSlider, {
+        start: [6200],
+        range: {
+            'min': [2000],
+            'max': [10000]
+        }
+    });
 });
-/*slider range*/
+
+
 
 

@@ -545,6 +545,7 @@ body_lock {
 .example__container {
   background-color: #f2f2f2;
   position: relative;
+  padding-bottom: 80px;
 }
 
 .example__container:after {
@@ -670,6 +671,82 @@ body_lock {
   position: absolute;
   top: -170px;
   right: 0;
+}
+
+.slider-range {
+  position: absolute;
+  bottom: 0;
+  margin-left: 322px;
+}
+
+.slider-range__body {
+  position: relative;
+}
+
+.slider-range__body:after,
+.slider-range__body:before {
+  position: absolute;
+  font-family: Oswald;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #111111;
+  border-bottom: 1px  dashed #cdcdcd;
+  padding-bottom: 6px;
+}
+
+.slider-range__body:after {
+  content: "было";
+  top: -9px;
+  left: -80px;
+}
+
+.slider-range__body:before {
+  content: "стало";
+  top: -9px;
+  right: -80px;
+}
+
+.slider-range .noUi-target {
+  background: inherit;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  width: 428px;
+  height: 6px;
+  background-color: #dcdcdc;
+  border-radius: 2.5px;
+}
+
+.slider-range .noUi-handle {
+  border-radius: 50%;
+  background-color: #fff;
+  width: 34px;
+  height: 34px;
+  position: relative;
+  top: 0;
+}
+
+.slider-range .noUi-handle:after,
+.slider-range .noUi-handle:before {
+  display: none;
+}
+
+.slider-range .noUi-touch-area {
+  width: 8px;
+  height: 8px;
+  background-color: #68b738;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.slider-range .noUi-origin {
+  margin-top: -8px;
 }
 
 @media screen and (max-width: 1280px) {
