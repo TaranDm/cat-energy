@@ -6,6 +6,7 @@
 }
 .specification {
   &__container {
+    margin-bottom: 75px;
 
   }
   &__title {
@@ -174,7 +175,133 @@
 }
 .example {
 
-}
-.example__container {
 
+  &__container {
+    background-color: #f2f2f2;
+    position: relative;
+    &:after {
+      //background-color: #eaeaea;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 72%;
+      width: 100%;
+      background: linear-gradient(to right, #f2f2f2 71.8%, #eaeaea 28.2%);
+      z-index: -1;
+    }
+
+
+
+  }
+
+  &__title {
+    font-family: Oswald;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    color: #111111;
+    margin-top: 30px;
+    margin-bottom: 65px;
+
+
+  }
+  &__wrapper {
+    display: flex;
+    position: relative;
+
+
+    &__before {
+
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+   max-width: 430px;
+    margin: 68px 0;
+
+  }
+  &__fact {
+    display: flex;
+    div {
+      padding: 17.5px 58px;
+      border: 1px solid #cdcdcd;
+      border-radius: 3px;
+      position: relative;
+      margin-bottom: 62px;
+    }
+
+    span {
+      font-family: Oswald;
+      font-size: 30px;
+      line-height: 37px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #111111;
+    }
+  }
+  &__mass {
+    margin-right: 42px;
+
+  &:before {
+    content: "снижение веса";
+    padding: 7px;
+    background-color: #f2f2f2;
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translate(-50%, 0px);
+    white-space: nowrap;
+
+  }
+
+  }
+  &__term {
+    &:before {
+      content: "затрачено времени";
+      padding: 7px;
+      background-color: #f2f2f2;
+      position: absolute;
+      top: 53px;
+      left: 50%;
+      transform: translate(-50%, 0px);
+      white-space: nowrap;
+
+    }
+
+  }
+  &__total {
+    display: flex;
+    span{
+      font-family: Oswald;
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 400;
+      text-transform: uppercase;
+      color: #111111;
+    }
+
+  }
+  &__cost-text {
+    flex: 0 1 269px;
+
+  }
+  &__cost {
+
+  }
+  &__range-slider {
+
+  }
+  &__img {
+    position: absolute;
+    top: -170px;
+    right: 0;
+
+  }
+  &__slider {
+
+  }
 }
