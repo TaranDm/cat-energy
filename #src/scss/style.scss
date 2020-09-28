@@ -2,18 +2,13 @@
 /*подключение основного шрифта*/
 @import "fonts";
 
-
 /*шрифт по умолчанию */
 $fontfamily: ArialMT sans-serif;
 
-
 /*переменные*/
-$minwidth: 320px;
-$mw: 1300; /*прописываем вымеряную ширину контейнера (без отступов)*/
-$md1: $mw + 12;
-$md2: 991.98;
-$md3: 767.98;
-$md4: 479.98;
+$bgm: #68b738;
+
+
 @import "null";
 
 body {
@@ -23,11 +18,7 @@ body {
   color: #444444;
   background-color: #fff;
   font-weight: 400;
-  &_lock {
-    overflow: hidden;
-    @media (max-width: $md3+px) {
-    }
-  }
+
 }
 .index-page {
 &:before{
@@ -61,7 +52,6 @@ body {
   background-repeat: no-repeat;
   position: relative;
 }
-
 .ibg img{
   width: 0;
   height: 0;
@@ -87,9 +77,8 @@ body {
     max-width: 640px;
   }
   @media (max-width: 640px){
-
+    max-width: 570px;
   }
-
   @media (max-width: 570px){
     max-width: 480px;
   }

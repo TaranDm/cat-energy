@@ -10,11 +10,17 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Oswald";
+  font-display: swap;
+  src: url("../fonts/Oswald-VariableFont_wght.woff") format("woff"), url("../fonts/Oswald-VariableFont_wght.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
 /*шрифт по умолчанию */
 
 /*переменные*/
-
-/*прописываем вымеряную ширину контейнера (без отступов)*/
 
 * {
   padding: 0px;
@@ -118,10 +124,6 @@ body {
   font-weight: 400;
 }
 
-body_lock {
-  overflow: hidden;
-}
-
 .index-page:before {
   content: "";
   position: absolute;
@@ -219,6 +221,7 @@ body_lock {
 
 .menu__body {
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
 }
 
@@ -882,6 +885,7 @@ body_lock {
     height: 100%;
     left: 0;
     -ms-flex-item-align: inherit;
+        -ms-grid-row-align: inherit;
         align-self: inherit;
     top: -400px;
     overflow: auto;
@@ -1116,6 +1120,12 @@ body_lock {
 
   ._currently:after {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  ._container {
+    max-width: 570px;
   }
 }
 
