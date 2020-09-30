@@ -7,7 +7,8 @@
 .specification {
   &__container {
     margin-bottom: 75px;
-
+    @media (max-width: 975px) {
+      margin-bottom: 50px;}
   }
   &__title {
     font-family: Oswald;
@@ -15,6 +16,9 @@
     line-height: 60px;
     color: #111111;
     margin-bottom: 63px;
+    @media (max-width: 975px) {
+      margin-bottom: 50px;
+    }
     @media (max-width: 768px) {
       font-size: 36px;
       line-height: 36px;
@@ -26,9 +30,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     @media (max-width: 975px) {
-
+      border-bottom: 1px solid  #f2f2f2;
+      padding-bottom: 50px;
     }
-
 
   }
   &__item {
@@ -175,13 +179,14 @@
 }
 .example {
 
-
   &__container {
     background-color: #f2f2f2;
     position: relative;
     padding-bottom: 80px;
+    @media (max-width: 975px) {
+      background-color: #ffff;
+    }
     &:after {
-      //background-color: #eaeaea;
       content: "";
       position: absolute;
       bottom: 0;
@@ -192,10 +197,7 @@
       z-index: -1;
     }
 
-
-
   }
-
   &__title {
     font-family: Oswald;
     font-size: 60px;
@@ -204,6 +206,9 @@
     color: #111111;
     margin-top: 30px;
     margin-bottom: 65px;
+    @media (max-width: 975px) {
+      margin-bottom: 60px;
+    }
 
 
   }
@@ -212,27 +217,57 @@
     position: relative;
 
 
-    &__before {
-
-    }
   }
   &__description {
     display: flex;
     flex-direction: column;
   }
+
+  &__wrap {
+    @media (max-width: 975px) {
+      display: flex;
+      @media (max-width: 768px) {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
   &__text {
    max-width: 430px;
-    margin: 68px 0;
+   margin-bottom: 68px;
+    @media (max-width: 975px) {
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 27px;
+
+    }
 
   }
   &__fact {
     display: flex;
+    @media (max-width: 975px) {
+      flex: 1 1 100%;
+    }
+
     div {
       padding: 17.5px 58px;
       border: 1px solid #cdcdcd;
       border-radius: 3px;
       position: relative;
       margin-bottom: 62px;
+      @media (max-width: 768px) {
+        display: flex;
+        width: 124px;
+        height: 56px;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+      }
     }
 
     span {
@@ -242,8 +277,12 @@
       font-weight: 400;
       text-transform: uppercase;
       color: #111111;
+      @media (max-width: 768px) {
+        font-family: Oswald;
+        font-size: 24px;
+        line-height: 24px;
     }
-  }
+  }}
   &__mass {
     margin-right: 42px;
 
@@ -256,9 +295,21 @@
     left: 50%;
     transform: translate(-50%, 0px);
     white-space: nowrap;
+    @media (max-width: 975px) {
+      background-color: #ffff;
+    }
+    @media (max-width: 768px) {
+      padding: 0px;
+      white-space: normal;
+      font-size: 12px;
+      line-height: 12px;
+      top: 42px;
+      text-align: center;
+    }
+
+
 
   }
-
   }
   &__term {
     &:before {
@@ -270,12 +321,26 @@
       left: 50%;
       transform: translate(-50%, 0px);
       white-space: nowrap;
+      @media (max-width: 975px) {
+        background-color: #ffff;
+      }
+      @media (max-width: 768px) {
+        padding: 0px;
+        white-space: normal;
+        font-size: 12px;
+        line-height: 12px;
+        top: 42px;
+        text-align: center;
+      }
 
     }
 
   }
   &__total {
     display: flex;
+    @media (max-width: 975px) {
+      flex-wrap: wrap;
+    }
     span{
       font-family: Oswald;
       font-size: 20px;
@@ -288,9 +353,20 @@
   }
   &__cost-text {
     flex: 0 1 269px;
-
+    @media (max-width: 768px) {
+      position: relative;
+      flex: 0 1 auto;
+    }
   }
   &__cost {
+    @media (max-width: 975px) {
+      position: relative;
+      top: -36px;
+    }
+    @media (max-width: 768px) {
+      position: relative;
+      top: 0px;
+    }
 
   }
   &__range-slider {
@@ -351,11 +427,9 @@
     border-radius: 50%;
     background-color: #fff;
     width: 34px;
-    height: 34px;
+    height: 34px !important;
     position: relative;
     top: 0;
-
-
 
     &:after, &:before {
       display: none;
