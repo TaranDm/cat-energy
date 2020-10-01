@@ -35,7 +35,10 @@ document.addEventListener('DOMContentLoaded', function() {
             'max': [10000]
         }
     });
+
+    // /
 });
+
 
 
 
