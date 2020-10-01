@@ -89,12 +89,84 @@ body {
 @import "block-catalog";
 @import "description";
 
-.map {
+.contacts {
   iframe {
-    min-width: 100%;
-    height: 400px;
+   width: 100%;
+    max-height: 360px;
+  }
+
+  &__container {
+
+
+  }
+
+  &__content {
+
+    padding: 70px 90px 60px 75px;
+    max-width: 570px;
+    background-color: #fff;
+    position: absolute;
+    margin-top: 95px;
+    display: flex;
+    @media screen and (max-width : 1280px) {
+      max-width: 100%;
+      padding: 70px;
+      position: relative;
+      margin-top: 0px;
+    }
+    @media screen and (max-width : 768px) {
+      padding: 30px 20px;
+    }
+    @media (max-width: 570px){
+      flex-direction: column;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+    }
+
+  }
+  &__title {
+    font-family: Oswald;
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #111111;
+    margin-right: 45px;
+    @media screen and (max-width : 1280px) {
+      flex: 0 1 100%;
+    }
+    @media screen and (max-width : 975px) {
+      font-size: 16px;
+      line-height: 20px;
+      margin-right: 0px;
+    }
+    @media screen and (max-width : 570px) {
+      margin-bottom: 10px;
+    }
+  }
+  &__address {
+    display: flex;
+    flex-direction: column;
+    span {
+      line-height: 20px;
+      @media screen and (max-width : 975px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+  &__street {
+    flex: 1 1 100%;
+  }
+  &__city {
+    @media screen and (max-width : 570px) {
+      text-align: center;
+    }
   }
   }
+
+
 
 
 
