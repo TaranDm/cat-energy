@@ -43,6 +43,7 @@ body {
   //overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 .ibg{
   background-position: center;
@@ -132,7 +133,7 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     color: #111111;
-    margin-right: 45px;
+    margin-right: 123px;
     @media screen and (max-width : 1280px) {
       flex: 0 1 100%;
     }
@@ -165,6 +166,10 @@ body {
     }
   }
   }
+
+@import "footer";
+
+
 
 
 
