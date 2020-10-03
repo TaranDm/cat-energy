@@ -1,0 +1,127 @@
+.main-catalog {
+
+}
+.catalog {
+  &__container {
+    margin-top: 83px;
+
+
+  }
+
+  &__title {
+    font-family: Oswald;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+    color: #111111;
+
+  }
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+
+  }
+  &__item {
+    margin-top: 142px;
+
+  }
+}
+
+.item-catalog {
+  background-color: #f2f2f2;
+  max-width: 245px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &--showing {
+    background-color: #fff;
+    border: 1px solid rgba(205, 205, 205, 0.5);
+  }
+  &__img {
+    position: relative;
+    img {
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+    }
+    &--little {
+      top: -92px;
+    }
+    &--big {
+      top: -118px;
+      right: 13px;
+    }
+
+  }
+  &__title {
+    font-family: Oswald;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #111111;
+    text-align: center;
+    margin: 100px 10px 40px 10px;
+    &--showing {
+      margin: 13px 10px 40px 10px;
+    }
+  }
+  &__wrapper {
+    span {
+      line-height: 16px;
+    }
+
+  }
+  &__cross {
+    text-align: center;
+    margin-top: 25px;
+    span {
+      display: inline-block;
+      width: 60px;
+      height: 1px;
+      background-color: rgba(0, 0, 0, 0.2 );
+      position: relative;
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 60px;
+        height: 1px;
+        background-color: rgba(0, 0, 0, 0.2 );
+        transform: rotate(90deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+    }
+  }
+  &__feature {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+  }
+  &__text {
+    text-align: center;
+  }
+  &__btn {
+    font-family: Oswald;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: $bgm;
+    padding: 10px 0;
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+    &--showing {
+      background-color: #f2f2f2;
+      color: #444444;
+    }
+
+  }
+}

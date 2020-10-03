@@ -33,7 +33,6 @@
       border-bottom: 1px solid  #f2f2f2;
       padding-bottom: 50px;
     }
-
   }
   &__item {
     @media (max-width: 975px) {
@@ -44,13 +43,9 @@
       flex:1 1 100%;
       margin-bottom: 5px;
     }
-
   }
-
 }
-
 .specification-item {
-
   @media (max-width: 768px) {
     padding: 10px 10px 10px 0;
     flex-direction: row;
@@ -59,7 +54,6 @@
   display: flex;
   flex-direction: column;
   position: relative;
-
 
   &:after {
     content: "";

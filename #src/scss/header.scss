@@ -106,6 +106,7 @@
 }
 
 .menu {
+
   &__body{
     align-self: center;
     @media (max-width:768px) {
@@ -121,7 +122,6 @@
       /*делаем текст меню навигации не видимым при появлении бургер меню (разрешение 768px)*/
       opacity: 0;
       visibility: hidden;
-
       /* плашка которая закрывает меню при расширении менее 768px */
       &:after {
         content: "";
@@ -137,7 +137,7 @@
         visibility: visible;
         top: 0px;
         transition: all 0.3s ease 0s;
-        z-index: 1;
+        z-index: 2;
       }
     }
   }
@@ -197,7 +197,29 @@ display: flex;
   }
 }
 
-
+.catalog {
+  .menu__link {
+    color: #000;
+  }
+  ._currently {
+    position: relative;
+    &:after{
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      bottom: -10px;
+      height: 2px;
+      background-color: #68b738;
+      @media screen and (max-width : 1280px) {
+        background-color: #68b738;
+      }
+      @media screen and (max-width : 728px) {
+        display: none;
+      }
+    }
+  }
+}
 
 
 

@@ -40,26 +40,11 @@ body {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  //overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
 }
-.ibg{
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-}
-.ibg img{
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  visibility: hidden;
-}
+
 @import "header";
 ._container {
   max-width: 1260px;
@@ -166,7 +151,7 @@ body {
     }
   }
   }
-
+@import "catalog";
 @import "footer";
 
 
