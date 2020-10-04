@@ -806,7 +806,7 @@ body {
 }
 
 .catalog__container {
-  margin-top: 83px;
+  padding: 80px 0;
 }
 
 .catalog__title {
@@ -830,6 +830,7 @@ body {
 
 .catalog__item {
   margin-top: 142px;
+  margin-left: 10px;
 }
 
 .item-catalog {
@@ -885,7 +886,7 @@ body {
   text-transform: uppercase;
   color: #111111;
   text-align: center;
-  margin: 100px 50px 40px 50px;
+  margin: 100px 15px 40px 15px;
 }
 
 .item-catalog__title--showing {
@@ -960,6 +961,7 @@ body {
 
 .add-product {
   position: relative;
+  margin-bottom: 85px;
 }
 
 .add-product:before {
@@ -999,11 +1001,14 @@ body {
           flex: 1 0 73%;
 }
 
+.add-product__list:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
 /*========item-product========*/
 
 .item-product {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
   padding: 15px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1014,6 +1019,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.item-product:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .item-product__name {
@@ -1050,6 +1061,7 @@ body {
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .item-product__present {
@@ -1259,6 +1271,7 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    margin-top: 70px;
   }
 
   .item-product__img {
@@ -1847,6 +1860,24 @@ body {
     width: 100%;
   }
 
+  .item-product {
+    padding: 30px 40px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+
+  .item-product__name {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+  }
+
+  .item-product__btn {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    margin-top: 25px;
+  }
+
   .item-product__present {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1944,6 +1975,17 @@ body {
   .contacts__city {
     text-align: center;
   }
+
+  .item-product {
+    padding: 30px 20px;
+  }
+
+  .item-product__name {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    margin-bottom: 10px;
+  }
 }
 
 @media (max-width: 320px) {
@@ -1971,6 +2013,10 @@ body {
     line-height: 14px;
     margin: 15px 0 15px 0;
     text-align: center;
+  }
+
+  .footer__container {
+    padding-top: 40px;
   }
 }
 

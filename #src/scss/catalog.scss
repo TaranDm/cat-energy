@@ -3,7 +3,7 @@
 }
 .catalog {
   &__container {
-    margin-top: 83px;
+    padding: 80px 0;
 
 
   }
@@ -20,11 +20,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    //padding-right: -10px;
+    //padding-left: -10px;
 
 
   }
   &__item {
     margin-top: 142px;
+    //margin-right: 10px;
+    margin-left: 10px;
+
 
   }
 }
@@ -73,7 +78,7 @@
     text-transform: uppercase;
     color: #111111;
     text-align: center;
-    margin: 100px 50px 40px 50px;
+    margin: 100px 15px 40px 15px;
     &--showing {
       margin: 40px 30px;
     }
@@ -138,6 +143,7 @@
 
 .add-product {
   position: relative;
+  margin-bottom: 85px;
   &:before {
     content: "";
     position: absolute;
@@ -170,6 +176,9 @@
   }
   &__list {
     flex: 1 0 73%;
+    &:last-child {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
 
   }
   &__item {
@@ -180,13 +189,23 @@
 
 /*========item-product========*/
 .item-product {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  //border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
   padding: 15px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  flex-wrap: wrap;
+  &:last-child {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  @media screen and (max-width : 768px) {
+    padding: 30px 40px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
+  @media screen and (max-width : 570px) {
+    padding: 30px 20px;
+  }
   &__name {
     font-family: Oswald;
     font-size: 20px;
@@ -194,6 +213,15 @@
     font-weight: 400;
     text-transform: uppercase;
     color: #222222;
+    @media screen and (max-width : 768px) {
+      flex: 0 1 50%;
+    }
+    @media screen and (max-width : 570px) {
+      flex: 1 1 100%;
+      margin-bottom: 10px;
+    }
+
+
   }
 
   &__volume {
@@ -202,6 +230,9 @@
     line-height: 20px;
     font-weight: 400;
     color: #444444;
+    @media screen and (max-width : 768px) {
+
+    }
   }
 
   &__cost {
@@ -210,7 +241,11 @@
     line-height: 20px;
     font-weight: 400;
     color: #444444;
+    @media screen and (max-width : 768px) {
+      //flex: 1 1 25%;
+    }
   }
+
 
   &__btn {
     background-color: $bgm;
@@ -221,6 +256,11 @@
     line-height: 20px;
     font-weight: 400;
     text-transform: uppercase;
+    text-align: center;
+    @media screen and (max-width : 768px) {
+      flex: 1 1 100%;
+      margin-top: 25px;
+    }
 
   }
 
@@ -234,12 +274,14 @@
       width: 100%;
       padding: 75px 125px 75px 75px;
       justify-content: space-between;
+      margin-top: 70px;
     }
     @media screen and (max-width : 768px) {
       flex-direction: column;
       padding: 65px 60px 40px 60px;
       justify-content: center;
       align-items: center;
+
     }
 
   }
